@@ -39,6 +39,7 @@ class Lookup {
                     break;
                 }
             }
+        return "Empty";
     }
 
 }

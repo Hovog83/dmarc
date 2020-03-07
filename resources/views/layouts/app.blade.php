@@ -14,7 +14,7 @@
 	  <link href="/assets/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	  <link href="/assets/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 		<meta name="csrf-token" content="{{ csrf_token() }}">
-	  <link href="/assets/assets/css/style.css?v=2" rel="stylesheet">
+	  <link href="/assets/assets/css/style.css?v=21" rel="stylesheet">
 	</head>
     <body>
 		<!-- ======= Header ======= -->
@@ -44,7 +44,7 @@
          <script src="/assets/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
          <script src="/assets/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
          <!-- Template Main JS File -->
-         <script src="/assets/assets/js/main.js"></script>
+         <script src="/assets/assets/js/main.js?v=1"></script>
 		
        </body>
 

@@ -10,12 +10,12 @@
       <form action="/lookup/get-dns" method="post" role="form" id="getDns" class="php-email-form">
         <div class="row no-gutters">
           <div class="col-md-6 form-group pr-md-1">
-            <input type="text" name="selectot" class="form-control" id="selectot" placeholder="Selectot" />
-            <div class="validate"></div>
+            <input type="text" name="selectot" class="form-control" placeholder="Selectot" />
+            <div class="validate" id="selectotValidate"></div>
           </div>
           <div class="col-md-6 form-group pl-md-1">
-            <input type="text" class="form-control" name="domen" id="domen" placeholder="Domen"  />
-            <div class="validate"></div>
+            <input type="text" class="form-control" name="domen"  placeholder="Domen"  />
+            <div class="validate" id="domenValidate"></div>
           </div>
         </div>
 

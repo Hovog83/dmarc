@@ -60,8 +60,18 @@
       type: 'post',
       dataType: 'json',
       data: $(this).serialize(),
+      error: function(jqXhr, json, errorThrown){
+        $("#selectotValidate").text("");
+        $("#domenValidate").text("");
+        if(jqXhr.responseJSON.errors.selectot){
+          $("#selectotValidate").text(jqXhr.responseJSON.errors.selectot.toString())
+        } 
+        if(jqXhr.responseJSON.errors.domen){
+          $("#domenValidate").text(jqXhr.responseJSON.errors.domen.toString())
+        }
+      },
       success:function(data) {
-
+        console.log(data);
         $("#tableDmarc tbody").html("")
          let html = "<tr>"
         $.each(data.dmarc, function(i, item) {
