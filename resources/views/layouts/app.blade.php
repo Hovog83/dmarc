@@ -14,7 +14,7 @@
 	  <link href="/assets/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	  <link href="/assets/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 		<meta name="csrf-token" content="{{ csrf_token() }}">
-	  <link href="/assets/assets/css/style.css" rel="stylesheet">
+	  <link href="/assets/assets/css/style.css?v=2" rel="stylesheet">
 	</head>
     <body>
 		<!-- ======= Header ======= -->

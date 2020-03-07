@@ -177,6 +177,8 @@ return [
 
         Orchestra\Parser\XmlServiceProvider::class,
 
+        App\Providers\LookupServiceProvider::class,
+
     ],
 
     /*
@@ -229,6 +231,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'XmlParser' => Orchestra\Parser\Xml\Facade::class,
+
+        'LookupService' => App\Facades\LookupService::class,
+
     ],
 
 ];

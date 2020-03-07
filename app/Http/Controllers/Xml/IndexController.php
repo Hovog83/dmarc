@@ -22,13 +22,12 @@ class IndexController extends Controller
 
     public function fileUpload(Request $request)
     {
-        $contents = file_get_contents($request->file("file")->getRealPath());
+        $contents  = file_get_contents($request->file("file")->getRealPath());
         $xmlString = str_replace('<?xml version=\"1.0\" encoding=\"UTF-8\" ?>', '',$contents );
+
+
         $xml = new \SimpleXMLElement($xmlString);
-        unset($xml->report_metadata);
-        unset($xml->policy_published);
-        // dd($xml->record);
-        return view('xml.view',["xml"=>$xml]);
+        return view('xml.view',["xml"=>$xml->record]);
 
     }
 

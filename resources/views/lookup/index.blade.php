@@ -25,8 +25,7 @@
         <input type="submit" > </div>
       </form>
     </div>
-    
-	<div class="container">
+	<div class="container mgTop20">
 		<div class="row">
 			<div class="col-xs-6 table-responsive" id="info"  style="display: none">
 					<div>

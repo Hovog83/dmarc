@@ -110,9 +110,20 @@
         $("#info").css("display","block");
       }
     })
-    
-    
   })  
+     $(".xmlRow").each(function(index) {
+        var dkum = $(this).children('.dkum').text();
+        var spf = $(this).children('.spf').text();
 
+        if(dkum == "pass" && spf == "pass"){
+          $(this).css("background","#80bb80")
+        }else if( dkum == "fail" && spf == "fail" ){
+          $(this).css("background","#ff7575")
+        }else{
+          $(this).css("background","#fdd375")
+        }
+
+
+     });
 
 })(jQuery);

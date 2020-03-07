@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Lookup;
 
 use App\Http\Controllers\Controller;
-use App\Helper\Dns as Dns;
 use Illuminate\Http\Request;
+use LookupService;
 
 class LookupController extends Controller
 {
@@ -20,16 +20,12 @@ class LookupController extends Controller
 
     public function getDns(Request $request)
     {
-        $dns    = dns_get_record($request->domen, DNS_TXT);
-        $dmarc  = dns_get_record('_dmarc.'.$request->domen, DNS_TXT);
-        $dkim   = dns_get_record($request->selectot.'._domainkey.'.$request->domen, DNS_TXT);
-        $spf    = Dns::getSpf($dns);
-        
+        $dns = LookupService::dns($request->selectot,$request->domen);
+
         return response()->json([
-            "allDns" =>  $dns,
-            "dmarc"  =>  $dmarc,
-            "dkim"   =>  $dkim,
-            "spf"    =>  $spf
+            "dmarc"  =>  $dns->dmarc(),
+            "dkim"   =>  $dns->dkim(),
+            "spf"    =>  $dns->spf(),
         ]);
     }
 }
