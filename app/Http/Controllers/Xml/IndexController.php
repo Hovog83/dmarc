@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Xml;
 
 use App\Http\Controllers\Controller;
-use App\Helper\Dns as Dns;
 use Illuminate\Http\Request;
 use Orchestra\Parser\Xml\Facade as XmlParser;
 
